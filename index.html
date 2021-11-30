@@ -32,14 +32,14 @@
          1-3 lines of cide
         */
     </style>
-    <script src="d3.js"></script>
+    <script src="https://vjm44.github.io/coursera1.github.io/d3.js"></script>
 </head>
 
 <body>
     <h1>Airlines Routes</h1>
     <div class="mainView">
         <div>
-            <h2>Airlines</h2>
+            <h2>AirlinesLIKE</h2>
             <svg id="AirlinesChart"></svg>
         </div>
         <div>
@@ -52,11 +52,11 @@
 let store = {}
 
 function loadData() {
-  let promise = d3.csv("https://coursera1.000webhostapp.com/routes.csv")//TODO 1: Add the code to load the CSV file named "routes.csv" | 1 Line
+  let promise = d3.csv("https://vjm44.github.io/coursera1.github.io/routes.csv")//TODO 1: Add the code to load the CSV file named "routes.csv" | 1 Line
   return promise.then(routes =>  {
-      store.routes = //TODO 2: Save the routes into our store variable;
+      store.routes = store//TODO 2: Save the routes into our store variable;
       return store;
-  }
+  })
 }
     function groupByAirline(data) {
       //Iterate over each route, producing a dictionary where the keys is are the ailines ids and the values are the information of the airline.
